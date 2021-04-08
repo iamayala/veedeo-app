@@ -1,7 +1,6 @@
 import React from 'react'
 import { StatusBar, StyleSheet, View } from 'react-native'
 
-import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Tabs from '../components/Tabs'
 
@@ -16,7 +15,6 @@ const Home = () => {
 				barStyle='light-content'
 			/>
 			<View style={styles.Container}>
-				<Header />
 				<Hero videos={api} />
 				<Tabs />
 			</View>
