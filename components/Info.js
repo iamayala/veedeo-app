@@ -1,19 +1,25 @@
-import React from 'react'
-
-import { Feather } from '@expo/vector-icons'
-
-import { StyleSheet, View, Text, Image } from 'react-native'
+import React, { useState } from 'react'
+import { Feather, MaterialIcons } from '@expo/vector-icons'
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 
 const Info = ({ user }) => {
+	const [numberOfLines, setNumberOfLines] = useState(3)
+
+	const handleNumberOfLines = () => {
+		setNumberOfLines(10)
+	}
+
 	return (
 	<View style={styles.Container}>
 		<View style={styles.User}>
 			<Text style={styles.UserName}>@{user.username}</Text>
 			<Image style={styles.Checked} source={require('../assets/icons/checked.png')} />
 		</View>
-		<Text style={styles.Description}>{user.description}</Text>
+		<TouchableOpacity onPress={() => handleNumberOfLines()}>
+			<Text numberOfLines={numberOfLines} style={styles.Description}>{user.description}</Text>
+		</TouchableOpacity>
 		<View style={styles.Music}>
-			<Feather name='music' size={18} color="white" />
+			<MaterialIcons name="music-note" size={20} color="white" />
 			<Text style={styles.MusicName}>{user.music}</Text>
 		</View>
 	</View>
