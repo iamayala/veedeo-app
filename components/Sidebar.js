@@ -1,22 +1,30 @@
-import React from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 const Sidebar = ({ avatar, count }) => {
+	const [liked, setLiked] = useState(false)
+
+	const handleLike = () => {
+		setLiked(!liked)
+	}
 	return (
 		<View style={styles.Container}>
+			
+			<TouchableOpacity onPress={() => handleLike()} style={styles.Menu}>
+				{ liked ? <MaterialIcons name="favorite" size={35} color="red" /> : <MaterialIcons name="favorite" size={35} color="white" /> }				
+				<Text style={styles.Count} >{count.like}</Text>
+			</TouchableOpacity>
+
 			<View style={styles.Menu}>
 				<View style={styles.User}>
 					<Image style={styles.Avatar} resizeMode='cover' source={avatar} />
 				</View>
 			</View>
 
-			<View style={styles.Menu}>
-				<Image style={styles.Icon} resizeMode='contain' source={require('../assets/icons/like.png')} />
-				<Text style={styles.Count} >{count.like}</Text>
-			</View>
 
-			<View style={styles.Menu}>
+			{/* <View style={styles.Menu}>
 				<Image 
 					style={styles.Icon}
 					resizeMode='contain'
@@ -34,7 +42,7 @@ const Sidebar = ({ avatar, count }) => {
 				<View style={styles.SoundBg}>
 					<Image style={styles.Sound} resizeMode='cover' source={avatar} />
 				</View>
-			</View>
+			</View> */}
 		</View>
 	)
 }
@@ -58,7 +66,7 @@ const styles = StyleSheet.create({
 	User: {
 		width: 45,
 		height: 45,
-		marginBottom: 13
+		marginBottom: 5
 	},
 	Avatar: {
 		width: 45,

@@ -1,9 +1,5 @@
 import React from 'react'
-
-import { LinearGradient } from 'expo-linear-gradient'
-
 import { Feather } from '@expo/vector-icons'
-
 import { StyleSheet, View, Image, TouchableOpacity, Text } from 'react-native'
 
 const Tabs = () => {
@@ -20,15 +16,9 @@ const Tabs = () => {
 			</TouchableOpacity>
 
 			<TouchableOpacity style={styles.Menu}>
-				<LinearGradient
-					style={styles.Border}
-					start={{ x: 1, y: 0 }}
-					locations={[0, 0.5, 0.5, 1]}
-					colors={['#F42365', '#f42365', '#37d7cf', '#37d7cf']}>
-					<View style={styles.Button}>
-						<Feather name='plus' size={20} />
-					</View>
-				</LinearGradient>
+				<View style={styles.Button}>
+					<Feather name='plus' size={25} />
+				</View>
 			</TouchableOpacity>
 
 			<TouchableOpacity style={styles.Menu}>
@@ -52,9 +42,8 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		bottom: 0,
 		borderTopWidth: 1,
-		borderTopColor: 'rgba(255, 255, 255, 0.2)',
 		flexDirection: 'row',
-		backgroundColor: 'black'
+		backgroundColor: '#0b233d'
 	},
 	Menu: {
 		width: '20%',
@@ -81,8 +70,8 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	Button: {
-		width: 36,
-		height: 32,
+		width: 45,
+		height: 35,
 		backgroundColor: '#fff',
 		borderRadius: 8,
 		justifyContent: 'center',

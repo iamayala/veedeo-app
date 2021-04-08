@@ -1,7 +1,7 @@
 const api = [
 	{
 		id: 0,
-		video: require('../assets/videos/01.mp4'),
+		video: require('../assets/videos/001.mp4'),
 		poster: require('../assets/poster/01.jpg'),
 		user: {
 			username: 'justxee',
@@ -17,7 +17,7 @@ const api = [
 	},
 	{
 		id: 1,
-		video: require('../assets/videos/02.mp4'),
+		video: require('../assets/videos/002.mp4'),
 		poster: require('../assets/poster/02.jpg'),
 		user: {
 			username: 'elgloyo',
@@ -30,6 +30,22 @@ const api = [
 			like: '380K',
 			comment: '2388',
 			share: '535'
+		}
+	},
+	{
+		id: 2,
+		video: require('../assets/videos/003.mp4'),
+		poster: require('../assets/poster/02.jpg'),
+		user: {
+			username: 'adidas',
+			description: 'this is dummy video #3',
+			music: 'adidas original',
+			avatar: require('../assets/avatar/02.jpg')
+		},
+		count: {
+			like: '3.2M',
+			comment: '2,320,342',
+			share: '8.1K'
 		}
 	}
 ]
