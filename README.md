@@ -3,10 +3,11 @@
 
 I added a link here [Veedeo App](https://expo.io/--/to-exp/exp%3A%2F%2Fexp.host%2F%40justxee%2Fveedeo-app)
 
-If you don't have the expo-cli app install, you can download it [here](https://expo.io/client)
+If you don't have the expo-cli app installed, you can download it [here](https://expo.io/client)
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Before The App](https://github.com/iamayala/veedeo-app/blob/main/assets/screenshots/bfr-app.png?raw=true)
+![In The App](https://github.com/iamayala/veedeo-app/blob/main/assets/screenshots/in-app.png?raw=true)
 
 ## Dependencies
 * "@react-native-community/viewpager": "4.2.0",
