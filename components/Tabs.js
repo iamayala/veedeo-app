@@ -62,13 +62,6 @@ const styles = StyleSheet.create({
 		color: '#fff',
 		textTransform: 'capitalize'
 	},
-	Border: {
-		width: 44,
-		height: 32,
-		marginTop: -5,
-		borderRadius: 8,
-		alignItems: 'center'
-	},
 	Button: {
 		width: 45,
 		height: 35,

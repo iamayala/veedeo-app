@@ -75,26 +75,9 @@ const styles = StyleSheet.create({
 		borderWidth: 2,
 		borderColor: '#fff'
 	},
-	Icon: {
-		height: 35
-	},
 	Count: {
 		color: '#fff',
 		fontSize: 12,
 		letterSpacing: -.1,
 	},
-	SoundBg: {
-		backgroundColor: '#1f191f',
-		width: 50,
-		height: 50,
-		borderRadius: 50,
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginTop: 20
-	},
-	Sound: {
-		width: 25,
-		height: 25,
-		borderRadius: 20
-	}
 })

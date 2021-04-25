@@ -4,8 +4,7 @@ import { Dimensions, StyleSheet, View } from 'react-native'
 
 import { LinearGradient } from 'expo-linear-gradient'
 
-import ViewPager from '@react-native-community/viewpager'
-
+import Swiper from 'react-native-swiper'
 import VideoPlayer from '../components/VideoPlayer'
 import Info from '../components/Info'
 import Sidebar from '../components/Sidebar'
@@ -16,11 +15,7 @@ const Hero = ({ videos }) => {
 	const [selected, setSelected] = useState(0)
 
 	return (
-		<ViewPager
-			style={styles.Container}
-			orientation='vertical'
-			onPageSelected={e => setSelected(e.nativeEvent.position)}
-			initialPage={0}>
+		<Swiper>
 			{videos.map((item, index) => {
 				return (
 					<View key={index}>
@@ -46,7 +41,7 @@ const Hero = ({ videos }) => {
 					</View>
 				)
 			})}
-		</ViewPager>
+		</Swiper>
 	)
 }
 
